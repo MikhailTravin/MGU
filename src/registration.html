@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Регистрация"
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page registration page-other">
+			<div class="page__forms forms">
+				<div class="forms__container">
+					<div class="forms__content">
+						<div class="forms__steps">
+							<div class="forms__step active-step">
+								<div class="forms__step-icon">1</div>
+								<span>Создание аккаунта</span>
+							</div>
+							<div class="forms__step disabled">
+								<div class="forms__step-icon">2</div>
+								<span>Заполнение анкеты</span>
+							</div>
+							<div class="forms__step disabled">
+								<div class="forms__step-icon">3</div>
+								<span>Оплата членского взноса</span>
+							</div>
+						</div>
+						<h3>
+							Создание аккаунта члена
+							<br> Объединения выпускников
+						</h3>
+						<form action="#" class="forms__form form">
+							<div class="form__content">
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="email">Email</label>
+										<input data-validate data-required="email" id="email" autocomplete="off"
+											type="text" name="form[]" placeholder="D.Magunov@mail.ru">
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="phone">Номер телефона</label>
+										<input data-required id="phone" autocomplete="off" type="text" name="form[]"
+											placeholder="+7 (968) 322-22-11" class="telephone">
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="name">Фамилия Имя Отчество (если есть)</label>
+										<input data-required id="name" autocomplete="off" type="text" name="form[]"
+											placeholder="Магунов Данила Артёмович">
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="password">Придумайте пароль</label>
+										<input data-required="password" id="password" autocomplete="off" type="password"
+											name="form[]" placeholder="********************">
+										<div class="form__viewpass _icon-eye"></div>
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="password_2">Повторите указанный Вами пароль</label>
+										<input data-required="password" id="password_2" autocomplete="off"
+											type="password" name="form[]" placeholder="********************">
+										<div class="form__viewpass _icon-eye"></div>
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__checkbox checkbox">
+										<input data-required id="c_1" class="checkbox__input" type="checkbox" value="1"
+											name="form[]">
+										<label for="c_1" class="checkbox__label">
+											<div class="checkbox__icon _icon-check"></div>
+											<div class="checkbox__text">Я принимаю <a href="#">политику обработки
+													персональных
+													данных</a>
+											</div>
+										</label>
+									</div>
+									<div class="form__checkbox checkbox">
+										<input data-required id="c_2" class="checkbox__input" type="checkbox" value="2"
+											name="form[]">
+										<label for="c_2" class="checkbox__label">
+											<div class="checkbox__icon _icon-check"></div>
+											<div class="checkbox__text">Я принимаю <a href="#">пользовательское
+													соглашение</a>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<button type="submit"
+								class="form__button button-blue _icon-arrow">Зарегистрироваться</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

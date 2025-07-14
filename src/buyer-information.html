@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Данные покупателя"
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page page-other">
+			<div class="page__forms forms">
+				<div class="forms__container">
+					<div class="forms__content">
+						<div class="forms__steps">
+							<div class="forms__step step-check">
+								<div class="forms__step-icon _icon-check"></div>
+								<span>Корзина</span>
+							</div>
+							<div class="forms__step active-step">
+								<div class="forms__step-icon">2</div>
+								<span>Данные покупателя</span>
+							</div>
+							<div class="forms__step disabled">
+								<div class="forms__step-icon">3</div>
+								<span>Выбор способа доставки</span>
+							</div>
+							<div class="forms__step disabled">
+								<div class="forms__step-icon">4</div>
+								<span>Оплата</span>
+							</div>
+						</div>
+						<form action="#" class="forms__form form">
+							<div class="form__content">
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="email">Email*</label>
+										<input data-validate data-required="email" id="email" autocomplete="off"
+											type="text" name="form[]" placeholder="D.Magunov@mail.ru">
+										<div class="form__text">
+											На него придет информация о заказе и чек
+										</div>
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="phone">Номер телефона*</label>
+										<input data-required id="phone" autocomplete="off" type="text" name="form[]"
+											placeholder="+7 (968) 322-22-11" class="telephone">
+										<div class="form__text">
+											Для связи по доставке заказа
+										</div>
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="name">Фамилия Имя Отчество* </label>
+										<input data-required id="name" autocomplete="off" type="text" name="form[]"
+											placeholder="Магунов Данила Артёмович">
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__checkbox checkbox">
+										<input data-required id="c_1" class="checkbox__input" type="checkbox" value="1"
+											name="form[]">
+										<label for="c_1" class="checkbox__label">
+											<div class="checkbox__icon _icon-check"></div>
+											<div class="checkbox__text">Я принимаю <a href="#">политику обработки
+													персональных
+													данных</a>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="form__button button-blue _icon-arrow">Выбрать способ
+								доставки</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

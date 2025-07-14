@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Карточка товара"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<div class="breadcrambs">
+				<div class="breadcrambs__container">
+					<div class="breadcrambs__content">
+						<ul>
+							<li>
+								<a href="#">
+									Главная
+									<span class="_icon-arrow-2"></span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Товары
+									<span class="_icon-arrow-2"></span>
+								</a>
+							</li>
+							<li><span>Анорак с воротником-молнией МГУ-270</span></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="page__product-card product-card">
+				<div class="product-card__container">
+					<div class="product-card__content">
+						<div class="product-card__images">
+							<div class="product-card__slider swiper">
+								<div class="product-card__wrapper swiper-wrapper">
+									<div class="product-card__slide swiper-slide">
+										<div class="product-card__image">
+											<img src="../img/products/image-11.png" alt="">
+										</div>
+									</div>
+									<div class="product-card__slide swiper-slide">
+										<div class="product-card__image">
+											<img src="../img/products/image-11.png" alt="">
+										</div>
+									</div>
+									<div class="product-card__slide swiper-slide">
+										<div class="product-card__image">
+											<img src="../img/products/image-11.png" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product-card__pagination"></div>
+						</div>
+						<div class="product-card__body">
+							<div class="product-card__top">
+								<h1>Анорак с воротником-молнией МГУ-270</h1>
+								<div class="product-card__prices">
+									<s>11 500р.</s>
+									10 000р.
+									<div class="product-card__sale">-15%</div>
+								</div>
+							</div>
+							<p>
+								Описание описание описание описание описание описание описание описание описание
+								описание описание описание описание описание описание
+							</p>
+							<div class="product-card__bottom bottom-product-card">
+								<div class="bottom-product-card__column">
+									<div class="bottom-product-card__title">Размер</div>
+									<div class="bottom-product-card__options options">
+										<div class="options__item">
+											<input hidden id="o_1" class="options__input" type="radio" value="1"
+												name="option">
+											<label for="o_1" class="options__label">
+												<span class="options__text">XS</span>
+											</label>
+										</div>
+										<div class="options__item">
+											<input checked hidden id="o_2" class="options__input" type="radio" value="2"
+												name="option">
+											<label for="o_2" class="options__label">
+												<span class="options__text">S</span>
+											</label>
+										</div>
+										<div class="options__item">
+											<input hidden id="o_3" class="options__input" type="radio" value="3"
+												name="option">
+											<label for="o_3" class="options__label">
+												<span class="options__text">M</span>
+											</label>
+										</div>
+										<div class="options__item">
+											<input hidden id="o_4" class="options__input" type="radio" value="4"
+												name="option">
+											<label for="o_4" class="options__label">
+												<span class="options__text">L</span>
+											</label>
+										</div>
+										<div class="options__item">
+											<input hidden id="o_5" class="options__input" type="radio" value="5"
+												name="option">
+											<label for="o_5" class="options__label">
+												<span class="options__text">XL</span>
+											</label>
+										</div>
+										<div class="options__item">
+											<input hidden id="o_6" class="options__input" type="radio" value="6"
+												name="option">
+											<label for="o_6" class="options__label"><span
+													class="options__text">XXL</span></label>
+										</div>
+										<div class="options__item">
+											<input hidden id="o_7" class="options__input" type="radio" value="7"
+												name="option">
+											<label for="o_7" class="options__label">
+												<span class="options__text">XXXL</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="bottom-product-card__column">
+									<div class="bottom-product-card__title">Цвет</div>
+									<div class="bottom-product-card__colors">
+										<div class="bottom-product-card__color">
+											<a style="background-color: #1f2024;">
+												<span class="_icon-check"></span>
+											</a>
+										</div>
+										<div class="bottom-product-card__color">
+											<a style="background-color: #273656;">
+												<span class="_icon-check"></span>
+											</a>
+										</div>
+										<div class="bottom-product-card__color _active">
+											<a style="background-color: #d7e0f4;">
+												<span class="_icon-check"></span>
+											</a>
+										</div>
+										<div class="bottom-product-card__color">
+											<a style="border: 1px solid #273656; background-color: #ffffff;">
+												<span class="_icon-check"></span>
+											</a>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="bottom-product-card__button button-blue">Добавить в корзину</a>
+							</div>
+						</div>
+					</div>
+					<div class="product-card__sizes sizes-product-card">
+						<div class="sizes-product-card__title">Таблица размеров одежды для данной модели</div>
+						<div class="sizes-product-card__scrolls scrolls">
+							<div class="sizes-product-card__tables">
+								<div class="sizes-product-card__main-table">
+									<div class="sizes-product-card__item">
+										<span>Российский размер</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>Размер производителя</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>Ширина плеч</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>Обхват груди</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>Высота изделия по спине</span>
+									</div>
+								</div>
+								<div class="sizes-product-card__table">
+									<div class="sizes-product-card__item">
+										<span>40-42</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>XS</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>100-110</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>10-11</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>100-110</span>
+									</div>
+								</div>
+								<div class="sizes-product-card__table">
+									<div class="sizes-product-card__item">
+										<span>44</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>S</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>110-120</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>00-00</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>50-60</span>
+									</div>
+								</div>
+								<div class="sizes-product-card__table">
+									<div class="sizes-product-card__item">
+										<span>46-48</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>M</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>000-000</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>00-00</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>60-70</span>
+									</div>
+								</div>
+								<div class="sizes-product-card__table">
+									<div class="sizes-product-card__item">
+										<span>46-48</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>M</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>000-000</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>00-00</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>60-70</span>
+									</div>
+								</div>
+								<div class="sizes-product-card__table">
+									<div class="sizes-product-card__item">
+										<span>50</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>L</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>000-000</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>00-00</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>70-80</span>
+									</div>
+								</div>
+								<div class="sizes-product-card__table">
+									<div class="sizes-product-card__item">
+										<span>52-54</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>XL</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>000-000</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>00-00</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>81-82</span>
+									</div>
+								</div>
+								<div class="sizes-product-card__table">
+									<div class="sizes-product-card__item">
+										<span>56</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>XXL</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>000-000</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>00-00</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>82-83</span>
+									</div>
+								</div>
+								<div class="sizes-product-card__table">
+									<div class="sizes-product-card__item">
+										<span>58</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>XXXL</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>000-000</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>00-00</span>
+									</div>
+									<div class="sizes-product-card__item">
+										<span>83-84</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__products products">
+				<div class="products__container">
+					<div class="products__content">
+						<div class="products__product-cart">
+							<div class="products__info info-products">
+								<div class="info-products__body">
+									<div class="info-products__icon _icon-loupe"></div>
+									<h4>
+										Может быть
+										интересно
+									</h4>
+								</div>
+							</div>
+							<div class="products__scrolls scroll">
+								<div class="products__body">
+									<div class="products__column">
+										<div class="products__item item-products">
+											<div class="item-products__image">
+												<img loading="lazy" src="../img/products/image-1.png" alt="">
+												<div class="item-products__sale">-15%</div>
+											</div>
+											<div class="item-products__desc">
+												<div class="item-products__items">
+													<div class="item-products__title">
+														Кружка
+													</div>
+													<div class="item-products__price">
+														2 500р.
+													</div>
+													<div class="item-products__text">
+														Кружка в фирменном стиле из прочного материала. Отличный
+														по...
+													</div>
+												</div>
+												<a href="#" class="item-products__button button-blue">Добавить в
+													корзину</a>
+											</div>
+										</div>
+									</div>
+									<div class="products__column">
+										<div class="products__item item-products">
+											<div class="item-products__image">
+												<img loading="lazy" src="../img/products/image-2.png" alt="">
+											</div>
+											<div class="item-products__desc">
+												<div class="item-products__items">
+													<div class="item-products__title">
+														Анорак с молнией МГУ-270
+													</div>
+													<div class="item-products__price">
+														10 000р.
+													</div>
+													<div class="item-products__text">
+														Анорак из ткани премиум класса с вышивкой...
+													</div>
+												</div>
+												<a href="#" class="item-products__button button-blue">Выбрать
+													размер</a>
+											</div>
+										</div>
+									</div>
+									<div class="products__column">
+										<div class="products__item item-products">
+											<div class="item-products__image">
+												<img loading="lazy" src="../img/products/image-3.png" alt="">
+											</div>
+											<div class="item-products__desc">
+												<div class="item-products__items">
+													<div class="item-products__title">
+														Кепка МГУ-270
+													</div>
+													<div class="item-products__price">
+														5 000р.
+													</div>
+													<div class="item-products__text">
+														Тканевая кепка с жестким козырьком
+													</div>
+												</div>
+												<a href="#" class="item-products__button button-blue">Добавить в
+													корзину</a>
+											</div>
+										</div>
+									</div>
+									<div class="products__column">
+										<div class="products__item item-products">
+											<div class="item-products__image">
+												<img loading="lazy" src="../img/products/image-4.png" alt="">
+											</div>
+											<div class="item-products__desc">
+												<div class="item-products__items">
+													<div class="item-products__title">
+														Флешка МГУ-270 на 250 ГБ USB 3.0
+													</div>
+													<div class="item-products__price">
+														1 500р.
+													</div>
+													<div class="item-products__text">
+														USB-флеш-накопитель  памяти для учебы
+													</div>
+												</div>
+												<a href="#" class="item-products__button button-blue">Добавить в
+													корзину</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

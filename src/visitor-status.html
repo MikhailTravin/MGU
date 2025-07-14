@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Статус посетителя"
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page page-other">
+			<div class="page__forms forms page-other">
+				<div class="forms__container">
+					<div class="forms__content">
+						<div class="forms__steps">
+							<div class="forms__step step-check">
+								<div class="forms__step-icon _icon-check"></div>
+								<span>Выбор мероприятия</span>
+							</div>
+							<div class="forms__step active-step">
+								<div class="forms__step-icon">2</div>
+								<span>Статус посетителя</span>
+							</div>
+							<div class="forms__step disabled">
+								<div class="forms__step-icon">3</div>
+								<span>Информация о покупателе</span>
+							</div>
+							<div class="forms__step disabled">
+								<div class="forms__step-icon">4</div>
+								<span>Оплата</span>
+							</div>
+						</div>
+						<div class="forms__questions questions-forms">
+							<div class="questions-forms__content">
+								<h4>Являетесь ли Вы членом РОО «Объединение выпускников Юридического факультета МГУ»?
+								</h4>
+								<div class="questions-forms__buttons">
+									<div class="questions-forms__button">
+										<a href="#" class="button-dark-blue">Да</a>
+									</div>
+									<div class="questions-forms__button">
+										<a href="#" class="button-dark-blue">Нет</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

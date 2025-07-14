@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Пожертвование"
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page donat page-other">
+			<div class="page__forms forms">
+				<div class="forms__container">
+					<div class="forms__content">
+						<h3>
+							Пожертвование РОО «Объединение выпускников Юридического факультета МГУ имени М.В.Ломоносова»
+						</h3>
+						<form action="#" class="forms__form form">
+							<div class="form__content">
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="name">Фамилия Имя Отчество* </label>
+										<input data-required id="name" autocomplete="off" type="text" name="form[]"
+											placeholder="Магунов Данила Артёмович">
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="email">Email*</label>
+										<input data-validate data-required="email" id="email" autocomplete="off"
+											type="text" name="form[]" placeholder="D.Magunov@mail.ru">
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__input">
+										<label for="phone">Номер телефона*</label>
+										<input data-required id="phone" autocomplete="off" type="text" name="form[]"
+											placeholder="+7 (968) 322-22-11" class="telephone">
+									</div>
+								</div>
+								<div class="form__inputs">
+									<div class="form__checkbox checkbox">
+										<input data-required id="c_1" class="checkbox__input" type="checkbox" value="1"
+											name="form[]">
+										<label for="c_1" class="checkbox__label">
+											<div class="checkbox__icon _icon-check"></div>
+											<div class="checkbox__text">Я принимаю <a href="#">политику обработки
+													персональных
+													данных</a>
+											</div>
+										</label>
+									</div>
+									<div class="form__checkbox checkbox">
+										<input data-required id="c_2" class="checkbox__input" type="checkbox" value="2"
+											name="form[]">
+										<label for="c_2" class="checkbox__label">
+											<div class="checkbox__icon _icon-check"></div>
+											<div class="checkbox__text">Я принимаю <a href="#">пользовательское соглашение</a>
+											</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<button type="submit"
+								class="form__button button-blue _icon-arrow">Зарегистрироваться</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
