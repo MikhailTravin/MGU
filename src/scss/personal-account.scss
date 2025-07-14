@@ -1,0 +1,545 @@
+.page {
+    // .page__personal-account
+    &__personal-account {
+        display: flex;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+    // .personal-account__membership
+    &__membership {
+    }
+}
+
+.personal-account {
+    // .personal-account__menu
+    &__menu {
+        flex: 0 0 256px;
+        padding: 100px 20px;
+        background: linear-gradient(180deg, #273656 30.5%, #0055dc 100%);
+        @media (max-width: $tablet) {
+            padding: 50px 10px;
+        }
+        @media (max-width: $mobile) {
+            flex: 1 1 auto;
+        }
+    }
+    // .personal-account__body
+    &__body {
+        flex: 1 1 auto;
+    }
+    // .personal-account__top
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        @media (max-width: $tablet) {
+            padding: 15px;
+            justify-content: start;
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+    // .personal-account__breadcrambs
+    &__breadcrambs {
+        padding: 0px 0px 0px 0px;
+    }
+    // .personal-account__name
+    &__name {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 0px 30px;
+        @media (max-width: $tablet) {
+            margin: 15px 0px 0px 0px;
+        }
+        span {
+            font-weight: 400;
+            font-size: 16px;
+            text-align: right;
+            margin: 0px 0px 5px 0px;
+            @media (max-width: $mobile) {
+                text-align: left;
+                font-size: 14px;
+            }
+        }
+        a {
+            font-weight: 400;
+            font-size: 14px;
+            text-align: right;
+            pointer-events: none;
+            @media (max-width: $mobile) {
+                text-align: left;
+                font-size: 13px;
+            }
+        }
+    }
+    // .personal-account__content
+    &__content {
+        max-width: 1104px;
+        margin: 30px 40px;
+        @media (max-width: $tablet) {
+            margin: 15px;
+        }
+    }
+    // .personal-account__title
+    &__title {
+        font-weight: 700;
+        font-size: 20px;
+        margin: 0px 0px 40px 0px;
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            margin: 0px 0px 20px 0px;
+        }
+    }
+    // .personal-account__forms
+    &__forms {
+    }
+    // .personal-account__form
+    &__form {
+        .form__inputs {
+            margin: -8px 0px;
+            &.disabled {
+                input {
+                    border: 1px solid #f4f4f5;
+                    pointer-events: none;
+                }
+            }
+        }
+        .form__input {
+            padding: 8px 0px;
+            label {
+                font-family: $fontFamilyIntroBook;
+                font-weight: 400;
+                font-size: 16px;
+                @media (max-width: $mobile) {
+                    font-size: 14px;
+                }
+            }
+            input {
+                font-family: $fontFamilyInter;
+                font-weight: 400;
+                font-size: 14px;
+                color: $mainColor;
+                border: 1px solid $mainColor;
+            }
+        }
+        .form__buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+            padding: 57px 0px 0px 0px;
+            margin: -4px;
+            @media (max-width: $mobile) {
+                padding: 30px 0px 0px 0px;
+            }
+            @media (max-width: $mobileSmall) {
+                flex-direction: column;
+            }
+        }
+        .form__button {
+            flex: 0 1 auto;
+            margin: 0px 0px 0px 0px;
+            padding: 4px;
+            width: auto;
+            @media (max-width: $mobileSmall) {
+                width: 100%;
+            }
+        }
+        .button {
+            border-radius: 10px;
+            padding: 13px 56px;
+            border: 2px solid #d4d4d8;
+            font-weight: 400;
+            font-size: 18px;
+            color: #27272a;
+            font-family: $fontFamilyInter;
+            &:hover {
+                color: $white;
+                border: 2px solid $mainColor;
+            }
+            @media (max-width: $mobileSmall) {
+                font-size: 14px;
+                width: 100%;
+            }
+        }
+        .button-dark-blue {
+            border-radius: 10px;
+            padding: 13px 56px;
+            font-weight: 400;
+            font-size: 18px;
+            color: $white;
+            font-family: $fontFamilyInter;
+            &:hover {
+                color: $mainColor;
+            }
+            @media (max-width: $mobileSmall) {
+                width: 100%;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.menu-personal-account {
+    // .menu-personal-account__content
+    &__content {
+    }
+    // .menu-personal-account__spollers
+    &__spollers {
+    }
+}
+
+//========================================================================================================================================================
+
+//Членские взносы
+
+.membership-personal-account {
+    // .membership-personal-account__top
+    &__top {
+        display: flex;
+        max-width: 711px;
+        margin: 0px 0px 50px 0px;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+        @media (max-width: $mobile) {
+            margin: 0px 0px 15px 0px;
+        }
+    }
+    // .membership-personal-account__images
+    &__images {
+        flex: 0 0 345px;
+        display: flex;
+        @media (max-width: $tablet) {
+            flex: 1 1 auto;
+            width: 100%;
+        }
+    }
+    // .membership-personal-account__info
+    &__info {
+        flex: 0 1 auto;
+        p {
+            border-radius: 8px;
+            padding: 23px 20px;
+            background: $light-blue;
+            font-family: $fontFamilyIntroBook;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 123%;
+            letter-spacing: 0.01em;
+            margin: 0px 0px 0px 20px;
+            @media (max-width: $tablet) {
+                margin: 15px 0px 0px 0px;
+            }
+        }
+    }
+    // .membership-personal-account__advantages
+    &__advantages {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -13px -10px;
+        max-width: 711px;
+        padding: 0px 0px 50px 0px;
+        @media (max-width: $mobile) {
+            padding: 0px 0px 15px 0px;
+        }
+        @media (max-width: 375px) {
+            margin: -5px;
+        }
+    }
+    // .membership-personal-account__column
+    &__column {
+        flex: 0 1 25%;
+        padding: 13px 10px;
+        @media (max-width: $tablet) {
+            flex: 0 1 50%;
+        }
+        @media (max-width: 375px) {
+            padding: 5px;
+        }
+    }
+    // .membership-personal-account__item
+    &__item {
+        border-radius: 8px;
+        padding: 24px 20px;
+        background: $light-blue;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    // .membership-personal-account__desc
+    &__desc {
+        flex: 1 1 auto;
+        margin: 0px 0px 10px 0px;
+        h4 {
+            margin: 0px 0px 10px 0px;
+        }
+        p {
+            font-family: $fontFamilyIntroBook;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 123%;
+            letter-spacing: 0.01em;
+        }
+    }
+    // .membership-personal-account__icon
+    &__icon {
+        &::before {
+            font-size: 8px;
+            color: #000;
+        }
+    }
+    // .membership-personal-account__payments
+    &__payments {
+    }
+    // .membership-personal-account__paid-desc
+    &__paid-desc {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin: 0px 0px 144px 0px;
+        max-width: 600px;
+        @media (max-width: $tablet) {
+            margin: 0px 0px 40px 0px;
+            padding: 0px 17px 0px 17px;
+        }
+        a {
+            font-weight: 400;
+            font-size: 18px;
+            padding: 15px 38px;
+            @media (max-width: $mobile) {
+                padding: 8px;
+                width: 100%;
+                font-size: 16px;
+                border-radius: 4px;
+            }
+        }
+    }
+    // .membership-personal-account__desc-text
+    &__desc-text {
+        margin: 0px 0px 38px 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px 8px 0px;
+        }
+        p {
+            font-family: $fontFamilyIntroBook;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 111%;
+            margin: 0px 0px 15px 0px;
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+            @media (max-width: $mobile) {
+                font-size: 13px;
+                margin: 0px 0px 8px 0px;
+            }
+        }
+    }
+}
+
+.membership-no-paid {
+    @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+    }
+    .images-personal-account__top {
+        h4 {
+            color: $white;
+        }
+    }
+    .membership-personal-account__top {
+        @media (max-width: $tablet) {
+            order: 1;
+        }
+    }
+    .personal-account__title {
+        @media (max-width: $tablet) {
+            padding: 17px 17px 0px 17px;
+            order: 2;
+        }
+    }
+    .membership-personal-account__paid-desc {
+        @media (max-width: $tablet) {
+            order: 3;
+        }
+    }
+    .membership-personal-account__advantages {
+        @media (max-width: $tablet) {
+            order: 4;
+        }
+    }
+}
+
+.images-personal-account {
+    // .images-personal-account__image
+    &__image {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        flex: 0 1 345px;
+        background: linear-gradient(180deg, #273656 30.5%, #0055dc 100%);
+        position: relative;
+        border-radius: 8px;
+        padding: 24px;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            z-index: 3;
+        }
+    }
+    // .images-personal-account__top
+    &__top {
+        position: relative;
+        z-index: 5;
+        flex: 1 1 auto;
+        max-width: 195px;
+        margin: 0px 0px 35px 0px;
+        h4 {
+            color: #a2c8fb;
+            margin: 0px 0px 6px 0px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 111%;
+            color: $white;
+            @media (max-width: $mobile) {
+                font-size: 16px;
+            }
+        }
+    }
+    // .images-personal-account__bottom
+    &__bottom {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        h4 {
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0px 0px 9px 0px;
+        }
+        h5 {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    }
+}
+
+.payments-personal-account {
+    // .payments-personal-account__title
+    &__title {
+        font-family: $fontFamilyIntroBook;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 111%;
+        margin: 0px 0px 32px 0px;
+        @media (max-width: $mobile) {
+            font-size: 16px;
+            margin: 0px 0px 16px 0px;
+        }
+    }
+    // .payments-personal-account__scrolls
+    &__scrolls {
+        @media (max-width: 1104px) {
+            width: calc(100% + 40px);
+            margin: 0px -40px 0px 0px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+    // .payments-personal-account__body
+    &__body {
+        margin: -10px 0px -10px 32px;
+    }
+    // .payments-personal-account__main-table
+    &__main-table {
+        display: flex;
+        padding: 10px 0px;
+        .payments-personal-account__item {
+            span {
+                font-family: $fontFamilyInter;
+                font-weight: 500;
+                font-size: 16px;
+                color: #a1a1aa;
+            }
+        }
+    }
+    // .payments-personal-account__item
+    &__item {
+        padding: 0px 12px 12px 0px;
+        flex: 0 0 235px;
+        border-bottom: 1px solid #f4f4f5;
+        &:nth-child(1) {
+            flex: 0 0 67px;
+        }
+        span {
+            font-family: $fontFamilyInter;
+            font-weight: 400;
+            font-size: 14px;
+            color: #27272a;
+            &.executed {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 133%;
+                color: #166534;
+                background: #dcfce7;
+                border-radius: 10px;
+                padding: 2px 10px;
+            }
+            &.process {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 133%;
+                color: #9a3412;
+                background: #ffedd5;
+                border-radius: 10px;
+                padding: 2px 10px;
+            }
+            &.rejected {
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 133%;
+                color: $red;
+                background: #fee2e2;
+                border-radius: 10px;
+                padding: 2px 10px;
+            }
+        }
+        a {
+            border: 1px solid #5c73db;
+            border-radius: 10px;
+            padding: 8px;
+            background: transparent;
+            font-family: $fontFamilyInter;
+            font-weight: 500;
+            font-size: 12px;
+            color: #5c73db;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease 0s;
+            &:hover {
+                color: $white;
+                background: #5c73db;
+            }
+        }
+    }
+    // .payments-personal-account__table
+    &__table {
+        display: flex;
+        padding: 10px 0px;
+    }
+}

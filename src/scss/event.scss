@@ -1,0 +1,322 @@
+.page {
+    // .page__event
+    &__event {
+        margin: 30px 0px 120px 0px;
+        @media (max-width: $mobile) {
+            margin: 15px 0px 60px 0px;
+        }
+    }
+    // .page__other-event
+    &__other-event {
+        margin: 0px 0px 126px 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px 60px 0px;
+        }
+        @media (max-width: $mobile) {
+            margin: 0px 0px 30px 0px;
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+//События
+
+.event {
+    // .event__container
+    &__container {
+    }
+    // .event__content
+    &__content {
+        max-width: 952px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    // .event__images
+    &__images {
+        width: 100%;
+        margin: 0px 0px 32px 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px 24px 0px;
+        }
+    }
+    // .event__button
+    &__button {
+        color: $white;
+        padding: 12px 16px;
+        background: $green;
+        margin: 0px 0px 48px 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px 24px 0px;
+        }
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+    }
+    // .event__body
+    &__body {
+        h2 {
+            margin: 0px 60px 40px 0px;
+            @media (max-width: 952px) {
+                margin: 0px 0px 40px 0px;
+            }
+            @media (max-width: $mobile) {
+                margin: 0px 0px 20px 0px;
+            }
+            &::after {
+                content: "";
+                display: none;
+            }
+        }
+    }
+    // .event__text
+    &__text {
+        p {
+            margin: 0px 0px 24px 0px;
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+            span {
+            }
+            a {
+                color: $green;
+                border-bottom: 1px solid transparent;
+                &:hover {
+                    border-bottom: 1px solid $green;
+                }
+                &.telephone {
+                    color: $mainColor;
+                    border-bottom: none;
+                    &:hover {
+                        color: $green;
+                    }
+                }
+            }
+            @media (max-width: $mobile) {
+                margin: 0px 0px 16px 0px;
+            }
+        }
+    }
+}
+
+.images-event {
+    // .images-event__image
+    &__image {
+        cursor: pointer;
+        position: relative;
+        min-height: 334px;
+        display: flex;
+        align-items: flex-end;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            z-index: 3;
+            background: linear-gradient(0deg, #273656 0%, rgba(39, 54, 86, 0) 100%);
+            transition: opacity 0.3s ease 0s;
+        }
+    }
+    // .images-event__body
+    &__body {
+        transition: opacity 0.3s ease 0s;
+        position: relative;
+        z-index: 5;
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 30px 60px 20px;
+        @media (max-width: 952px) {
+            padding: 30px 15px 50px 15px;
+        }
+        @media (max-width: $mobile) {
+            margin: -20px -10px;
+            padding: 30px 15px;
+        }
+        @media (max-width: 650px) {
+            flex-direction: column;
+            justify-content: start;
+            margin: -10px;
+            padding: 30px;
+        }
+    }
+    // .images-event__column
+    &__column {
+        display: flex;
+        flex: 1 1 auto;
+        &::after {
+            content: "";
+            height: calc(100% + 20px);
+            border-radius: 1px;
+            width: 2px;
+            background: rgba(255, 255, 255, 0.2);
+            margin: 0px 30px 0px 20px;
+            @media (max-width: $mobile) {
+                margin: 0px 15px;
+                height: calc(100% + 10px);
+            }
+        }
+        &:last-child {
+            &::after {
+                content: "";
+                display: none;
+            }
+        }
+        @media (max-width: $mobile) {
+            padding: 20px 10px;
+        }
+        @media (max-width: 650px) {
+            flex-direction: column;
+            padding: 10px 0px;
+            &::after {
+                content: "";
+                width: 100%;
+                height: 2px;
+                margin: 15px 0px;
+            }
+        }
+    }
+    // .images-event__item
+    &__item {
+        display: flex;
+        p {
+            font-family: $fontFamilyMontserrat;
+            font-weight: 500;
+            font-size: 16px;
+            color: $white;
+            @media (max-width: $mobile) {
+                font-size: 14px;
+            }
+        }
+    }
+    // .images-event__icon
+    &__icon {
+        &::before {
+            font-size: 30px;
+            color: $dark-gray;
+            margin: 0px 15px 0px 0px;
+            @media (max-width: $mobile) {
+                font-size: 28px;
+            }
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+//Другие события
+
+.other-event {
+    // .other-event__container
+    &__container {
+    }
+    // .other-event__top
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0px 0px 60px 0px;
+        @media (max-width: $mobile) {
+            margin: 0px 0px 30px 0px;
+        }
+        @media (max-width: $mobileSmall) {
+            margin: 0px 0px 20px 0px;
+        }
+        h2 {
+            &::after {
+                content: "";
+                margin: 11px 0px 0px 0px;
+            }
+        }
+    }
+    // .other-event__arrows
+    &__arrows {
+        display: flex;
+        margin: 0px 0px 0px -13px;
+    }
+    // .other-event__arrow-prev
+    &__arrow-prev {
+        cursor: pointer;
+        margin: -2px 13px 0px 13px;
+        &::before {
+            transform: rotate(-180deg);
+            font-size: 22px;
+            color: #e0e0e0;
+            transition: all 0.3s ease 0s;
+        }
+        &:hover {
+            &::before {
+                color: $accident-blue;
+            }
+        }
+        @media (max-width: $mobile) {
+            margin: -2px 5px 0px 5px;
+        }
+        @media (max-width: $mobileSmall) {
+            margin: -1px 5px 0px 5px;
+        }
+    }
+    // .other-event__arrow-next
+    &__arrow-next {
+        cursor: pointer;
+        margin: 0px 13px 0px 13px;
+        &::before {
+            font-size: 22px;
+            color: #e0e0e0;
+            transition: all 0.3s ease 0s;
+        }
+        &:hover {
+            &::before {
+                color: $accident-blue;
+            }
+        }
+        @media (max-width: $mobile) {
+            margin: 0px 5px 0px 5px;
+        }
+    }
+    // .other-event__body
+    &__body {
+    }
+    // .other-event__slider
+    &__slider {
+    }
+    // .other-event__wrapper
+    &__wrapper {
+    }
+    // .other-event__slide
+    &__slide {
+        display: flex;
+        height: auto;
+        h4 {
+            font-family: $fontFamilyMontserrat;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.4s ease 0s;
+        }
+        .filter__subtitle {
+            font-family: $fontFamilyMontserrat;
+            font-size: 14px;
+            line-height: 136%;
+            letter-spacing: normal;
+            transition: all 0.3s ease 0s;
+        }
+        .filter__title {
+            span {
+                font-family: $fontFamilyMontserrat;
+            }
+        }
+    }
+}

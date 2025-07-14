@@ -1,0 +1,73 @@
+.page {
+    // .page__main-association
+    &__main-association {
+        margin: 120px 0px 157px 0px;
+        @media (max-width: $tablet) {
+            margin: 60px 0px;
+        }
+        @media (max-width: $mobileSmall) {
+            margin: 30px 0px;
+        }
+    }
+    // .page__association
+    &__association {
+    }
+}
+
+.association {
+    // .association__container
+    &__container {
+    }
+    // .association__content
+    &__content {
+        h2 {
+            margin: 0px 0px 60px 0px;
+            @media (max-width: $mobile) {
+                margin: 0px 0px 30px 0px;
+            }
+            @media (max-width: $mobileSmall) {
+                margin: 0px 0px 20px 0px;
+            }
+        }
+    }
+    // .association__text
+    &__text {
+        padding: 0px 6px;
+        margin: 0px 0px 50px 0px;
+        p {
+            margin: 0px 0px 24px 0px;
+            &:last-child {
+                margin: 0px 0px 0px 0px;
+            }
+            @media (max-width: $mobile) {
+                margin: 0px 0px 16px 0px;
+            }
+        }
+        @media (max-width: $pc) {
+            padding: 0px 0px 0px 0px;
+        }
+        @media (max-width: $mobile) {
+            margin: 0px 0px 25px 0px;
+        }
+    }
+    // .association__buttons
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        margin: 0px -25px;
+        @media (max-width: $mobile) {
+            flex-direction: column;
+            align-items: center;
+            margin: -10px 0px;
+        }
+    }
+    // .association__button
+    &__button {
+        flex: 0 1 50%;
+        margin: 0px 25px;
+        @media (max-width: $mobile) {
+            flex: 1 1 auto;
+            margin: 10px 0px;
+        }
+    }
+}

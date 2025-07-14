@@ -1,0 +1,56 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-arrow-3:before {
+	content: "\e90c";
+}
+._icon-arrow-2:before {
+	content: "\e90b";
+}
+._icon-eye:before {
+	content: "\e900";
+}
+._icon-close:before {
+	content: "\e901";
+}
+._icon-loupe:before {
+	content: "\e902";
+}
+._icon-check:before {
+	content: "\e903";
+}
+._icon-check-2:before {
+	content: "\e904";
+}
+._icon-location:before {
+	content: "\e905";
+}
+._icon-clock:before {
+	content: "\e906";
+}
+._icon-telegram:before {
+	content: "\e907";
+}
+._icon-youtube:before {
+	content: "\e908";
+}
+._icon-vk:before {
+	content: "\e909";
+}
+._icon-arrow:before {
+	content: "\e90a";
+}

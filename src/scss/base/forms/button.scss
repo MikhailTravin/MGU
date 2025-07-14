@@ -1,0 +1,73 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.button {
+	font-family: $fontFamilyMontserrat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 112%;
+	text-align: center;
+	background: transparent;
+	border-radius: 6px;
+	padding: 12px 22px;
+	transition: all 0.3s ease 0s;
+	border: 2px solid $mainColor;
+	&:hover {
+		background: $mainColor;
+		color: $white;
+	}
+	@media (max-width: $mobile) {
+		font-size: 14px;
+	}
+}
+
+.button-blue {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 112%;
+	text-align: center;
+	color: $white;
+	background: $accident-blue;
+	border-radius: 12px;
+	padding: 12px 16px;
+	transition: all 0.3s ease 0s;
+	border: 2px solid transparent;
+	&:hover {
+		border: 2px solid $mainColor;
+		background: transparent;
+		color: $mainColor;
+	}
+	@media (max-width: $mobile) {
+		font-size: 14px;
+	}
+}
+
+.button-dark-blue {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 112%;
+	text-align: center;
+	color: $white;
+	background: $mainColor;
+	border-radius: 12px;
+	padding: 12px 16px;
+	transition: all 0.3s ease 0s;
+	border: 2px solid transparent;
+	&:hover {
+		border: 2px solid $mainColor;
+		background: transparent;
+		color: $mainColor;
+	}
+	@media (max-width: $mobile) {
+		font-size: 14px;
+	}
+}

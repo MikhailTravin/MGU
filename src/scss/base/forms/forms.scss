@@ -1,0 +1,503 @@
+//<FORM>
+// Снипет (HTML):
+
+.forms {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	margin: 54px 0px;
+	@media (max-width: $mobile) {
+		margin: 20px 0px;
+	}
+	// .forms__container
+	&__container {
+		max-width: 635px;
+		@media (max-width: 635px) {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	// .forms__titles
+	&__titles {
+		max-width: 310px;
+		padding: 24px 24px 40px 24px;
+		@media (max-width: $mobile) {
+			padding: 16px 16px 40px 16px;
+		}
+		h4 {
+			margin: 0px 0px 10px 0px;
+		}
+		p {
+			font-family: $fontFamilyIntroBook;
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 123%;
+			letter-spacing: 0.01em;
+			color: #71727a;
+		}
+	}
+	// .forms__content
+	&__content {
+		min-width: 635px;
+		@media (max-width: 635px) {
+			width: 100%;
+			min-width: 100%;
+		}
+		h3 {
+			text-align: center;
+			margin: 0px 0px 40px 0px;
+			@media (max-width: $mobile) {
+				margin: 0px 0px 20px 0px;
+			}
+		}
+	}
+	// .forms__steps
+	&__steps {
+		display: flex;
+		justify-content: space-between;
+		margin: 0px 0px 100px 0px;
+		@media (max-width: $mobile) {
+			margin: 0px 0px 50px 0px;
+			flex-direction: column;
+		}
+	}
+	// .forms__step
+	&__step {
+		cursor: pointer;
+		flex: 0 1 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		padding: 9px;
+		@media (max-width: $mobile) {
+			flex: 1 1 auto;
+		}
+		&.active-step {
+			.forms__step-icon {
+				color: $white;
+				background: $accident-blue;
+			}
+			span {
+				color: $mainColor;
+			}
+		}
+		&.disabled {
+			pointer-events: none;
+			.forms__step-icon {
+				color: #8f9098;
+				background: #f8f9fe;
+			}
+		}
+		span {
+			text-align: center;
+			font-weight: 400;
+			font-size: 15px;
+			color: #8f9098;
+		}
+	}
+	// .forms__step-icon
+	&__step-icon {
+		flex: 0 0 31px;
+		font-family: $fontFamilyInter;
+		font-weight: 600;
+		font-size: 13px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		display: flex;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 31px;
+		width: 31px;
+		height: 31px;
+		border-radius: 50%;
+		background: #b4dbff;
+		margin: 0px 0px 15px 0px;
+		&::before {
+			font-size: 10px;
+			color: $accident-blue;
+		}
+	}
+	// .forms__form
+	&__form {
+	}
+	// .forms__questions
+	&__questions {
+	}
+	// .forms__send
+	&__send {
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 125%;
+		text-align: center;
+		color: $green;
+	}
+}
+
+.form {
+	// .form__options
+	&__options {
+	}
+	// .form__content
+	&__content {
+		margin: -6px 0px;
+	}
+	// .form__inputs
+	&__inputs {
+		padding: 6px 0px;
+		.form__checkbox {
+			&._form-error {
+				.checkbox__icon {
+					border: 1px solid $red;
+				}
+			}
+		}
+		.checkbox__icon {
+			border: 1px solid #9fa6b2;
+			border-radius: 4px;
+			flex: 0 0 14px;
+			width: 14px;
+			height: 14px;
+			margin: 0px 12px 0px 0px;
+			background: transparent;
+			&::before {
+				border-radius: 4px;
+				flex: 0 0 14px;
+				width: 14px;
+				height: 14px;
+				font-size: 6px;
+			}
+		}
+		.checkbox__text {
+			display: block;
+			font-family: $fontFamily;
+			font-weight: 400;
+			font-size: 16px;
+			@media (max-width: $mobile) {
+				font-size: 14px;
+			}
+			a {
+				color: $accident-blue;
+				border-bottom: 1px solid $accident-blue;
+				transition: all 0.3s ease 0s;
+				&:hover {
+					border-bottom: 1px solid transparent;
+				}
+			}
+		}
+	}
+	// .form__input
+	&__input {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		&._form-error {
+			label {
+				color: $red;
+			}
+			.form__viewpass {
+				&::before {
+					color: $red;
+				}
+			}
+			.form__error-name {
+				display: block;
+			}
+		}
+		label {
+			font-weight: 400;
+			font-size: 18px;
+			line-height: 111%;
+			margin: 0px 0px 8px 0px;
+			@media (max-width: $mobile) {
+				font-size: 16px;
+			}
+		}
+		input {
+			border: 1px solid #e4e4e7;
+			border-radius: 12px;
+			padding: 16px;
+			width: 100%;
+			font-family: $fontFamilyInter;
+			font-weight: 400;
+			font-size: 14px;
+			&::placeholder {
+				color: #9fa6b2;
+			}
+			&._form-focus {
+				border: 1px solid $accident-blue;
+			}
+			&._form-error {
+				border: 1px solid $red;
+				&::placeholder {
+					color: $red;
+				}
+			}
+		}
+	}
+	// .form__error-name
+	&__error-name {
+		text-align: center;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 125%;
+		color: $red;
+		margin: 0px 0px 40px 0px;
+		display: none;
+		@media (max-width: $mobile) {
+			font-size: 14px;
+			margin: 0px 0px 20px 0px;
+		}
+	}
+	// .form__viewpass
+	&__viewpass {
+		cursor: pointer;
+		position: absolute;
+		top: 45px;
+		right: 16px;
+		&::before {
+			font-size: 16px;
+			color: #4b5563;
+			transition: all 0.3s ease 0s;
+		}
+		&:hover {
+			&::before {
+				color: $accident-blue;
+			}
+		}
+	}
+	// .form__text
+	&__text {
+		font-weight: 300;
+		font-size: 16px;
+		background: linear-gradient(180deg, #999 100%, #e4e4e7 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		margin: 8px 0px 0px 0px;
+		@media (max-width: $mobile) {
+			font-size: 13px;
+			margin: 4px 0px 0px 0px;
+		}
+	}
+	// .form__checkbox
+	&__checkbox {
+		margin: 0px 0px 8px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
+	}
+	// .form__button
+	&__button {
+		align-items: center;
+		flex-direction: row-reverse;
+		font-size: 18px;
+		width: 100%;
+		padding: 15px;
+		margin: 50px 0px 0px 0px;
+		@media (max-width: $mobile) {
+			font-size: 16px;
+			margin: 25px 0px 0px 0px;
+		}
+		&::before {
+			font-size: 12px;
+			color: $white;
+			margin: 0px 0px 0px 8px;
+			transition: all 0.3s ease 0s;
+		}
+		&:hover {
+			&::before {
+				color: $mainColor;
+			}
+		}
+	}
+	// .form__buttons
+	&__buttons {
+		margin: 16px 0px 0px 0px;
+	}
+	// .form__forgot-password
+	&__forgot-password {
+		margin: 0px 0px 16px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s ease 0s;
+		h4 {
+			text-align: center;
+		}
+		&:hover {
+			color: $accident-blue;
+		}
+	}
+	// .form__registration
+	&__registration {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 20px 0px 0px 0px;
+		transition: all 0.3s ease 0s;
+		h4 {
+			text-align: center;
+		}
+		a {
+			color: $accident-blue;
+			transition: all 0.3s ease 0s;
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+	// .form__button-registration
+	&__button-registration {
+		margin: 16px 0px 0px 0px;
+		font-size: 18px;
+		width: 100%;
+		padding: 15px;
+		@media (max-width: $mobile) {
+			font-size: 16px;
+		}
+	}
+}
+
+//статус посетителя
+.questions-forms {
+	// .questions-forms__content
+	&__content {
+		h4 {
+			text-align: center;
+			margin: 0px 0px 50px 0px;
+			@media (max-width: $mobile) {
+				margin: 0px 0px 25px 0px;
+			}
+		}
+	}
+	// .questions-forms__buttons
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -30px;
+		@media (max-width: $mobile) {
+			margin: -15px;
+		}
+		@media (max-width: $mobileSmall) {
+			margin: -10px;
+		}
+	}
+	// .questions-forms__button
+	&__button {
+		flex: 1 1 50%;
+		padding: 30px;
+		a {
+			font-size: 18px;
+			padding: 15px;
+		}
+		@media (max-width: $mobile) {
+			padding: 15px;
+			a {
+				font-size: 14px;
+				padding: 12px;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			padding: 10px;
+		}
+	}
+}
+
+//пожертвование
+.donat {
+	.forms__container {
+		max-width: 708px;
+	}
+	.forms__form {
+		max-width: 520px;
+		margin: 0 auto;
+	}
+}
+
+//Вход в личный кабинет
+.login {
+	.forms__form {
+		max-width: 520px;
+		margin: 0 auto;
+	}
+	.form__button {
+		margin: 0px 0px 0px 0px;
+	}
+}
+
+//регистрация
+.registration {
+	.forms__container {
+		max-width: 520px;
+		@media (max-width: 635px) {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+	.forms__content {
+		min-width: 520px;
+		@media (max-width: 635px) {
+			width: 100%;
+			min-width: 100%;
+		}
+	}
+}
+
+//пароль
+.password {
+	.forms__container {
+		max-width: 520px;
+		@media (max-width: 635px) {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+	.forms__content {
+		min-width: 520px;
+		@media (max-width: 635px) {
+			width: 100%;
+			min-width: 100%;
+		}
+	}
+	.form__button {
+		margin: 16px 0px 0px 0px;
+	}
+}
+
+//</FORM>
+
+// <BUTTONS>
+// Снипет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Снипет (HTML): inp
+// @import "input";
+
+// <CHECK>
+// Снипет (HTML): chk
+@import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+@import "radio";
+
+// <SELECT>
+// Снипет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+@import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";
